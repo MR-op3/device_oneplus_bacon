@@ -169,6 +169,43 @@ TARGET_NEEDS_GCC_LIBC := true
 # Text relocations for legacy blobs
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
+# TWRP Recovery
+#RECOVERY_VARIANT := twrp
+TW_THEME := portrait_hdpi
+BOARD_SUPPRESS_SECURE_ERASE := true
+BOARD_SUPPRESS_EMMC_WIPE := true
+RECOVERY_SDCARD_ON_DATA := true
+TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_EXTRA_LANGUAGES := true
+TW_INCLUDE_CRYPTO := true
+TW_NO_USB_STORAGE := true
+TW_UNMOUNT_FIRMWARE_ON_BOOT := true
+TW_TARGET_USES_QCOM_BSP := true
+TWHAVE_SELINUX := true
+
+#MultiROM config. MultiROM also uses parts of TWRP config
+TARGET_RECOVERY_IS_MULTIROM := true
+MR_ALLOW_NKK71_NOKEXEC_WORKAROUND := true
+MR_CONTINUOUS_FB_UPDATE := true
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := $(PLATFORM_PATH)/multirom/mr_init_devices.c
+MR_DPI := xhdpi
+MR_DPI_FONT := 340
+MR_USE_MROM_FSTAB := true
+MR_FSTAB := $(PLATFORM_PATH)/multirom/mrom.fstab
+MR_KEXEC_MEM_MIN := 0x05000000
+MR_KEXEC_DTB := true
+#MR_DEVICE_HOOKS := $(PLATFORM_PATH)/multirom/mr_hooks.c
+#MR_DEVICE_HOOKS_VER := 4
+MR_USE_QCOM_OVERLAY := true
+MR_QCOM_OVERLAY_HEADER := $(PLATFORM_PATH)/multirom/mr_qcom_overlay.h
+MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
+MR_QCOM_OVERLAY_HEAP_ID_MASK := 2
+MR_INFOS := $(PLATFORM_PATH)/multirom/mrom_infos
+MR_DEVICE_SPECIFIC_VERSION := bacon
+MR_DEVICE_VARIANTS := bacon A0001 onyx oneplus OnePlus E1003 ONE
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 

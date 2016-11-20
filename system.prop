@@ -2,6 +2,10 @@
 # system.prop for one+
 #
 
+ro.build.product=bacon
+ro.product.device=bacon
+ro.build.description=OnePlus
+
 # Bluetooth
 bluetooth.hfp.client=1
 qcom.bluetooth.soc=smd
