@@ -186,7 +186,7 @@ TWHAVE_SELINUX := true
 
 #MultiROM config. MultiROM also uses parts of TWRP config
 TARGET_RECOVERY_IS_MULTIROM := true
-MR_ALLOW_NKK71_NOKEXEC_WORKAROUND := true
+MR_NO_KEXEC := enabled
 MR_CONTINUOUS_FB_UPDATE := true
 MR_INPUT_TYPE := type_b
 MR_INIT_DEVICES := $(PLATFORM_PATH)/multirom/mr_init_devices.c
