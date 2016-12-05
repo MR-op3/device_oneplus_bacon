@@ -204,7 +204,7 @@ MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
 MR_QCOM_OVERLAY_HEAP_ID_MASK := 2
 MR_INFOS := $(PLATFORM_PATH)/multirom/mrom_infos
 MR_DEVICE_SPECIFIC_VERSION := nsd
-MR_DEVICE_VARIANTS := bacon A0001 onyx oneplus OnePlus E1003 ONE
+MR_DEVICE_VARIANTS := bacon A0001 oneplus OnePlus ONE
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
