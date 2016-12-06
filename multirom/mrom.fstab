@@ -1,13 +1,13 @@
 /firmware	vfat	/dev/block/mmcblk0p1
-/system	ext4	/dev/block/mmcblk0p27
+/system	ext4	/dev/block/mmcblk0p14
 /data	ext4	/dev/block/mmcblk0p28
 /data	f2fs	/dev/block/mmcblk0p28
-/cache	ext4	/dev/block/mmcblk0p15
-/cache	f2fs	/dev/block/mmcblk0p15
-/persist	ext4	/dev/block/mmcblk0p14
+/cache	ext4	/dev/block/mmcblk0p16
+/cache	f2fs	/dev/block/mmcblk0p16
+/persist	ext4	/dev/block/mmcblk0p15
 /boot	emmc	/dev/block/mmcblk0p7
-/recovery	emmc	/dev/block/mmcblk0p16
-/misc	emmc	/dev/block/mmcblk0p20
+/recovery	emmc	/dev/block/mmcblk0p17
+/misc	emmc	/dev/block/mmcblk0p21
 /efs1	emmc	/dev/block/mmcblk0p10
 /efs2	emmc	/dev/block/mmcblk0p11
 
