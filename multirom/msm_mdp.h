@@ -302,7 +302,6 @@ struct mdp_blit_req {
 	uint32_t transp_mask;
 	uint32_t flags;
 	int sharpening_strength;  /* -127 <--> 127, default 64 */
-	uint8_t color_space;
 };
 
 struct mdp_blit_req_list {
@@ -640,7 +639,6 @@ struct mdp_overlay {
 	uint8_t vert_deci;
 	struct mdp_overlay_pp_params overlay_pp_cfg;
 	struct mdp_scale_data scale;
-	uint8_t color_space;
 };
 
 struct msmfb_overlay_3d {
@@ -1005,6 +1003,7 @@ enum {
 	metadata_op_wb_secure,
 	metadata_op_get_caps,
 	metadata_op_crc,
+	metadata_op_get_ion_fd,
 	metadata_op_max
 };
 
@@ -1038,6 +1037,7 @@ struct msmfb_metadata {
 		uint32_t video_info_code;
 		struct mdss_hw_caps caps;
 		uint8_t secure_en;
+		int fbmem_ionfd;
 	} data;
 };
 
@@ -1123,12 +1123,6 @@ enum {
 	MDP_WRITEBACK_MIRROR_ON,
 	MDP_WRITEBACK_MIRROR_PAUSE,
 	MDP_WRITEBACK_MIRROR_RESUME,
-};
-
-enum {
-	MDP_CSC_ITU_R_601,
-	MDP_CSC_ITU_R_601_FR,
-	MDP_CSC_ITU_R_709,
 };
 
 #ifdef __KERNEL__

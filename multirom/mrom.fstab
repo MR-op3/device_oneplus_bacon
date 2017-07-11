@@ -1,15 +1,13 @@
-# mount point   fstype  device                  device2             flags
-/firmware	    vfat	/dev/block/mmcblk0p1
-/system	        ext4	/dev/block/mmcblk0p14
-/data	        ext4	/dev/block/mmcblk0p28
-/data	        f2fs	/dev/block/mmcblk0p28
-/cache	        ext4	/dev/block/mmcblk0p16
-/cache	        f2fs	/dev/block/mmcblk0p16
-/persist	    ext4	/dev/block/mmcblk0p15
-/boot	        emmc	/dev/block/mmcblk0p7
-/recovery	    emmc	/dev/block/mmcblk0p17
-/misc	        emmc	/dev/block/mmcblk0p21
-/efs1	        emmc	/dev/block/mmcblk0p10
-/efs2	        emmc	/dev/block/mmcblk0p11
+# mount point	fstype		device			[device2]
 
-/usb_otg	    auto	/dev/block/sda1	        /dev/block/sda	    flags=display="USB-OTG";storage;wipeingui;removable
+#/firmware      vfat     /dev/block/platform/msm_sdcc.1/by-name/modem     flags=mounttodecrypt;fsflags=ro
+/boot		   emmc		/dev/block/platform/msm_sdcc.1/by-name/boot
+/system		   ext4		/dev/block/platform/msm_sdcc.1/by-name/system
+#/data		   ext4		/dev/block/platform/msm_sdcc.1/by-name/userdata  flags=encryptable=/dev/block/platform/msm_sdcc.1/by-name/reserve4
+/data		   ext4		/dev/block/platform/msm_sdcc.1/by-name/userdata
+/cache		   ext4		/dev/block/platform/msm_sdcc.1/by-name/cache
+/misc		   emmc		/dev/block/platform/msm_sdcc.1/by-name/misc
+/recovery	   emmc		/dev/block/platform/msm_sdcc.1/by-name/recovery
+
+/usb_otg       vfat     /dev/block/sda1 /dev/block/sda                   flags=display="USB-OTG";storage;wipeingui;removable
+
