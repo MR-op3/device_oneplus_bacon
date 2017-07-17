@@ -18,6 +18,9 @@ ifneq ($(QCPATH),)
 $(call inherit-product-if-exists, $(QCPATH)/common/config/device-vendor.mk)
 endif
 
+# Disable Slim Framework
+DISABLE_SLIM_FRAMEWORK := true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay vendor/extra/overlays/phone-1080p
 
